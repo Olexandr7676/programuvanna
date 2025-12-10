@@ -1,57 +1,57 @@
 # Імпортуємо 10 бібліотек
-запити на імпорт
-імпортувати numpy як np
-імпортувати панди як pd
-імпортувати matplotlib.pyplot як plt
-з імпорту bs4 BeautifulSoup
-з імпорту PIL-файлу зображення
-від імпорту фальшивих
-з tqdm імпорт tqdm
-імпортувати дату та час
-імпортувати JS-файл
+import requests
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from bs4 import BeautifulSoup
+from PIL import Image
+from faker import Faker
+from tqdm import tqdm
+import datetime
+import json
 
 
-# --- 1. Використання запитів ---
-спробуйте:
-    відповідь = requests.get("https://api.github.com")
-    print(" Запити успішно отримали статус:", response.status_code)
-крім винятку як e:
-    print(" Помилка у запитах:", e)
+# --- 1. Використання requests ---
+try:
+    response = requests.get("https://api.github.com")
+    print(" Requests успішно отримав статус:", response.status_code)
+except Exception as e:
+    print(" Помилка у requests:", e)
 
 
 # --- 2. Використання numpy ---
-спробуйте:
+try:
     arr = np.array([1, 2, 3, 4, 5])
     print(" NumPy середнє значення:", np.mean(arr))
-крім винятку як e:
+except Exception as e:
     print(" Помилка у numpy:", e)
 
 
-# --- 3. Використання панд ---
-спробуйте:
+# --- 3. Використання pandas ---
+try:
     df = pd.DataFrame({"A": [1, 2, 3], "B": [4, 5, 6]})
     print(" Pandas таблиця:\n", df)
-крім винятку як e:
+except Exception as e:
     print(" Помилка у pandas:", e)
 
 
 # --- 4. Використання matplotlib ---
-спробуйте:
+try:
     plt.plot([1, 2, 3], [1, 4, 9])
     plt.title("Простий графік")
     plt.xlabel("X")
     plt.ylabel("Y")
-    plt.savefig("графіка.png")
-    plt.close() # закриваємо, щоб не завис процес
+    plt.savefig("plot.png")
+    plt.close()  # закриваємо, щоб не завис процес
     print(" Matplotlib графік збережено у plot.png")
-крім винятку як e:
+except Exception as e:
     print(" Помилка у matplotlib:", e)
 
 
-# --- 5. Використання фейкера ---
-спробуйте:
-    підробка = Фальшивий()
-    для _ в діапазоні(3):
+# --- 5. Використання faker ---
+try:
+    fake = Faker()
+    for _ in range(3):
         print(" Faker ім'я:", fake.name())
-крім винятку як e:
+except Exception as e:
     print(" Помилка у faker:", e)
