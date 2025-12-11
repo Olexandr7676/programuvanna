@@ -1,14 +1,14 @@
 # Імпортуємо 10 бібліотек
-import requests
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-from bs4 import BeautifulSoup
-from PIL import Image
-from faker import Faker
-from tqdm import tqdm
-import datetime
-import json
+import requests #для HTTP-запитів
+import numpy as np #математичні операції і робота з масивами
+import pandas as pd #таблиці
+import matplotlib.pyplot as plt #побудова графіків
+from bs4 import BeautifulSoup #витягує дані з веб-сторінок
+from PIL import Image # для роботи з зображеннями
+from faker import Faker # створює фейкові дані
+from tqdm import tqdm # індикатор прогресу 
+import datetime # дата час 
+import json # зчитує та зберігає дані
 
 
 # --- 1. Використання requests ---
